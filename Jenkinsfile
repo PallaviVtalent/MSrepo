@@ -15,14 +15,13 @@ steps
     }
     
 }
-stage ('Build1') 
-{
-    steps
-    {
-       sh "cd /home/ubuntu/workspace/28thJava/account-service ; mvn clean install " 
-    }
-}
- 
+        stage('Build') {
+            steps {
+                sh 'make' 
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+            }
+        }
+   
 }
     
 }
