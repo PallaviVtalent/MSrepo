@@ -1,7 +1,5 @@
 properties([parameters([choice(choices: ['account-service', 'customer-service', 'discovery-service', 'gateway-service', 'zipkin-service'], description: 'these are the parametrized services', name: 'BUILD_ENV')]), pipelineTriggers([githubPush()])])
 
-
-
 pipeline {
 agent {
 label '24thlinuxnode'
