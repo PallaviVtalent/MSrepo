@@ -47,7 +47,7 @@ steps
     steps
     node {'Ansible'}
     {
-       sh "cd /home/ubuntu/workspace/jenkinspipeline/account-service ; sudo docker build -t account-service . " 
+       sh "sudo ansible-playbook /root/k8s.yaml" 
     }
 }   
 }
