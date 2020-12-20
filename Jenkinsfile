@@ -42,7 +42,7 @@ steps
         
     }
 }
- stage ('k8sdeployment') 
+   stage ('k8sdeployment') 
 {
     steps
     node {'Ansible'}
