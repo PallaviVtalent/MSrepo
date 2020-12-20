@@ -50,7 +50,7 @@ stage ('k8s deployment')
     node ('Ansible')
     {
        sh " sudo ansible-playbook /root/k8s.yaml"
-      sh " sudo ansible-playbook /root/k8sservice.yaml"
+      sh " sudo ansible-playbook /root/k8sservices.yaml"
         
     }
 }   
