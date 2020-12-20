@@ -2,7 +2,7 @@ properties([parameters([choice(choices: ['account-service', 'customer-service', 
 
 pipeline {
 agent {
-label '24thlinuxnode'
+label 'Build server'
 }
 
 stages {
@@ -20,7 +20,7 @@ steps
         stage('Build') {
             steps {
                 
-                sh "cd /home/ec2-user/workspace/PipelineJob/account-service; mvn clean install "
+                sh "cd /home/ubuntu/workspace/jenkinspipeline/account-service; mvn clean install "
                 echo "Will deploy to ${BUILD_ENV}"
                echo "Will deploy to ${params.BUILD_ENV}" 
             }
