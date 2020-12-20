@@ -42,7 +42,14 @@ steps
         
     }
 }
-    
+ stage ('k8sdeployment') 
+{
+    steps
+    node {'Ansible'}
+    {
+       sh "cd /home/ubuntu/workspace/jenkinspipeline/account-service ; sudo docker build -t account-service . " 
+    }
+}   
 }
     
 }
